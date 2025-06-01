@@ -5,28 +5,35 @@
 }
 
 
-:root{
-    font-family: "inter", sans-serif;
-    font-size: 62.5%
 
+:root {
+    font-family: "Inter", sans-serif;
+    font-size: 62.5%;
     --background-primary: #F4F5FB;
     --background-secondary: #FFF;
     --color-brand: #CA3884;
     --color-brand-hover: #A52C6B;
     --color-danger: #C93847;
-    --content-primary: #080B12;
+    --content-primary: ☐ #080B12;
     --content-secondary: #374151;
     --content-tertiary: #9CA3AF;
     --always-white: #FFF;
     --border-primary: #D1D5DB;
     --border-hover: #B9C2D0;
-}
+    }
 
-body{
+
+body {
     font-size: 1.6rem;
     padding: 3.2rem;
     background: var(--background-primary);
-}
+    }
+
+
+
+
+
+
 
 header{
     margin-bottom: 4.4rem;
@@ -64,7 +71,50 @@ button {
     h1 {
     font-size: 2.4rem;
     color: var(--content-primary);
-    lline-height: 3.2rem
+    line-height: 3.2rem
     }
+
+ 
+main {
+    max-width: 62.7rem;
+    margin-inline: auto;
+    }
+
+    .add-item {
+    margin-bottom: 4rem;
+
+    input {
+    width: 100%;
+    padding: 1.2rem;
+    border: 2px solid var(--border-primary);
+    border-radius: 1.2rem;
+    margin-bottom: 1.6rem;
+    outline: none;
+    color: var(--content-primary);
+
+
+
+&::placeholder {
+color: var(--content-tertiary);
+}
+
+&:hover {
+border: 2px solid var(--border-hover);
+cursor: pointer;
+}
+
+&:focus {
+border: 2px solid var(--color-brand);
+}
+
+
+}
+
+}
+
+
+
+
+
 
     
