@@ -87,6 +87,8 @@ function removeItem(itemName) {
 
 
 
-        
+       function addHidewarningClass{
+        document.querySelector(".warning").classList.add("hide-warning")
+       } 
 
         
