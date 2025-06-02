@@ -86,9 +86,22 @@ function removeItem(itemName) {
 }
 
 
+   function addHidewarningClass{
+          } 
 
-       function addHidewarningClass{
-        document.querySelector(".warning").classList.add("hide-warning")
-       } 
 
-        
+
+          function verifyLocalStorageItems() {
+
+            const localStorageItems = localStorage.getItem("items")
+            
+            if (localStorageItems) {
+            
+            items = JSON.parse(localStorageItems)
+            showItemsList()
+            
+            }
+            
+            }
+            
+            verifyLocalStorageItems()
