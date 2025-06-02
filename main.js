@@ -86,22 +86,15 @@ function removeItem(itemName) {
 }
 
 
-   function addHidewarningClass{
-          } 
-
-
-
-          function verifyLocalStorageItems() {
-
-            const localStorageItems = localStorage.getItem("items")
-            
-            if (localStorageItems) {
-            
-            items = JSON.parse(localStorageItems)
-            showItemsList()
-            
-            }
-            
-            }
-            
-            verifyLocalStorageItems()
+function verifyLocalStorageItems() {
+    const localStorageItems = localStorage.getItem("items")
+    
+    if (localStorageItems) {
+    items = JSON.parse(localStorageItems)
+    showItemsList()
+    
+       }
+    
+    }
+    
+    verifyLocalStorageItems()
