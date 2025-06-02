@@ -1,20 +1,55 @@
 const items = []
 
 function addItem() {
-const itemName = document.querySelector("#item").value
 
+    const itemName = document.querySelector("#item").value
 
+    const item = {
 
+        name: itemName,
+        checked: false
+    }
 
-// objeto
-const item = {
-name: itemName,
-checked: false
+    items.push(item)
+
+    document.querySelector("#item").value = ""
+
+    showItemList()
 }
 
+function showItemList() {
 
-items.push(item)
-document.querySelector("#item").value = ""
-console.log(items)
+    const sectionList = document.querySelector(".list")
 
+    sectionList.innerHTML = ""
+
+    items.sort((ItemA, ItemB) => Number(a.checked) - Number(b.checked))
+
+    items.map((item, index) => {
+
+        sectionList.innerHTML += `
+        
+   <div class="item">
+                 <div>
+                  <input type="checkbox" name="list" id="item-${index}">
+                  <div class="custom-checkbox">
+                    <img src="./Assets/checked.svg" alt="checked">
+                  </div>
+                  <label for="item-${index}">${item.name}</label>
+                 </div>
+                 <button>
+                  <img src="./Assets/trash-icon.svg" alt="trash icon">
+                 </button>
+            </div>
+
+                                                                     
+        `
+    })
+}
+
+function checkItem(itemName) {
+
+    const item = items.find((item) => item.name === itemName)
+    item.checked = !item.checked
+    showItemsList()
 }
