@@ -4,6 +4,11 @@ function addItem() {
 
     const itemName = document.querySelector("#item").value
 
+    if (itemName === ""){
+        alert("digite um item valido")
+        return
+    }
+
     const item = {
 
         name: itemName,
@@ -79,6 +84,7 @@ function removeItem(itemName) {
     showItemsList()
 
 }
+
 
 
         
