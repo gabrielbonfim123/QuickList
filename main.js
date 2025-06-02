@@ -14,36 +14,39 @@ function addItem() {
 
     document.querySelector("#item").value = ""
 
-    showItemList()
+    showItemsList()
 }
 
-function showItemList() {
+function showItemsList() {
 
     const sectionList = document.querySelector(".list")
 
     sectionList.innerHTML = ""
 
-    items.sort((ItemA, ItemB) => Number(a.checked) - Number(b.checked))
+    items.sort((itemA, itemB) => Number(itemA.checked) - Number(itemB.checked))
 
+     
     items.map((item, index) => {
 
         sectionList.innerHTML += `
         
-   <div class="item">
+         <div class="item">
                  <div>
-                  <input type="checkbox" name="list" id="item-${index}">
+                  <input type="checkbox" name="list" id="item-${index}" ${item.checked === true ? "checked" : ""}>
                   <div class="custom-checkbox">
                     <img src="./Assets/checked.svg" alt="checked">
                   </div>
-                  <label for="item-${index}">${item.name}</label>
+                     <label for="item-${index}" onclick="checkItem('${item.name}')">${item.name}</label>
                  </div>
                  <button>
                   <img src="./Assets/trash-icon.svg" alt="trash icon">
                  </button>
             </div>
 
-                                                                     
+        
         `
+   
+        
     })
 }
 
@@ -53,3 +56,9 @@ function checkItem(itemName) {
     item.checked = !item.checked
     showItemsList()
 }
+
+
+
+        
+
+        
