@@ -39,7 +39,7 @@ function showItemsList() {
          <div class="item">
                  <div>
                   <input type="checkbox" name="list" id="item-${index}" ${item.checked === true ? "checked" : ""}>
-                  <div class="custom-checkbox">
+                 <div class="custom-checkbox" onclick="checkItem('${item.name}')">
                     <img src="./Assets/checked.svg" alt="checked">
                   </div>
                      <label for="item-${index}" onclick="checkItem('${item.name}')">${item.name}</label>
